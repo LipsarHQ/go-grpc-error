@@ -7,9 +7,9 @@ import (
 )
 
 func NewAbortedError(pbErrorInfo *errdetails.ErrorInfo) (err error) {
-	pbStatus := status.New(codes.Aborted, "")
-
 	var pbStatusWithDetails *status.Status
+
+	pbStatus := status.New(codes.Aborted, "")
 	if pbStatusWithDetails, err = pbStatus.WithDetails(pbErrorInfo); err != nil {
 		return pbStatus.Err()
 	}
@@ -18,9 +18,9 @@ func NewAbortedError(pbErrorInfo *errdetails.ErrorInfo) (err error) {
 }
 
 func NewAlreadyExistsError(pbResourceInfo *errdetails.ResourceInfo) (err error) {
-	pbStatus := status.New(codes.AlreadyExists, "")
-
 	var pbStatusWithDetails *status.Status
+
+	pbStatus := status.New(codes.AlreadyExists, "")
 	if pbStatusWithDetails, err = pbStatus.WithDetails(pbResourceInfo); err != nil {
 		return pbStatus.Err()
 	}
@@ -33,9 +33,9 @@ func NewCanceledError() (err error) {
 }
 
 func NewDataLossError(pbDebugInfo *errdetails.DebugInfo) (err error) {
-	pbStatus := status.New(codes.DataLoss, "")
-
 	var pbStatusWithDetails *status.Status
+
+	pbStatus := status.New(codes.DataLoss, "")
 	if pbStatusWithDetails, err = pbStatus.WithDetails(pbDebugInfo); err != nil {
 		return pbStatus.Err()
 	}
@@ -44,9 +44,9 @@ func NewDataLossError(pbDebugInfo *errdetails.DebugInfo) (err error) {
 }
 
 func NewDeadlineExceededError(pbDebugInfo *errdetails.DebugInfo) (err error) {
-	pbStatus := status.New(codes.DeadlineExceeded, "")
-
 	var pbStatusWithDetails *status.Status
+
+	pbStatus := status.New(codes.DeadlineExceeded, "")
 	if pbStatusWithDetails, err = pbStatus.WithDetails(pbDebugInfo); err != nil {
 		return pbStatus.Err()
 	}
@@ -55,9 +55,9 @@ func NewDeadlineExceededError(pbDebugInfo *errdetails.DebugInfo) (err error) {
 }
 
 func NewInternalError(pbDebugInfo *errdetails.DebugInfo) (err error) {
-	pbStatus := status.New(codes.Internal, "")
-
 	var pbStatusWithDetails *status.Status
+
+	pbStatus := status.New(codes.Internal, "")
 	if pbStatusWithDetails, err = pbStatus.WithDetails(pbDebugInfo); err != nil {
 		return pbStatus.Err()
 	}
@@ -66,9 +66,9 @@ func NewInternalError(pbDebugInfo *errdetails.DebugInfo) (err error) {
 }
 
 func NewInvalidArgumentError(pbBadRequest *errdetails.BadRequest) (err error) {
-	pbStatus := status.New(codes.InvalidArgument, "")
-
 	var pbStatusWithDetails *status.Status
+
+	pbStatus := status.New(codes.InvalidArgument, "")
 	if pbStatusWithDetails, err = pbStatus.WithDetails(pbBadRequest); err != nil {
 		return pbStatus.Err()
 	}
@@ -77,9 +77,9 @@ func NewInvalidArgumentError(pbBadRequest *errdetails.BadRequest) (err error) {
 }
 
 func NewNotFoundError(pbResourceInfo *errdetails.ResourceInfo) (err error) {
-	pbStatus := status.New(codes.NotFound, "")
-
 	var pbStatusWithDetails *status.Status
+
+	pbStatus := status.New(codes.NotFound, "")
 	if pbStatusWithDetails, err = pbStatus.WithDetails(pbResourceInfo); err != nil {
 		return pbStatus.Err()
 	}
@@ -88,9 +88,9 @@ func NewNotFoundError(pbResourceInfo *errdetails.ResourceInfo) (err error) {
 }
 
 func NewOutOfRangeError(pbBadRequest *errdetails.BadRequest) (err error) {
-	pbStatus := status.New(codes.OutOfRange, "")
-
 	var pbStatusWithDetails *status.Status
+
+	pbStatus := status.New(codes.OutOfRange, "")
 	if pbStatusWithDetails, err = pbStatus.WithDetails(pbBadRequest); err != nil {
 		return pbStatus.Err()
 	}
@@ -99,9 +99,9 @@ func NewOutOfRangeError(pbBadRequest *errdetails.BadRequest) (err error) {
 }
 
 func NewPermissionDeniedError(pbErrorInfo *errdetails.ErrorInfo) (err error) {
-	pbStatus := status.New(codes.PermissionDenied, "")
-
 	var pbStatusWithDetails *status.Status
+
+	pbStatus := status.New(codes.PermissionDenied, "")
 	if pbStatusWithDetails, err = pbStatus.WithDetails(pbErrorInfo); err != nil {
 		return pbStatus.Err()
 	}
@@ -110,9 +110,9 @@ func NewPermissionDeniedError(pbErrorInfo *errdetails.ErrorInfo) (err error) {
 }
 
 func NewPreconditionFailureError(pbPreconditionFailure *errdetails.PreconditionFailure) (err error) {
-	pbStatus := status.New(codes.FailedPrecondition, "")
-
 	var pbStatusWithDetails *status.Status
+
+	pbStatus := status.New(codes.FailedPrecondition, "")
 	if pbStatusWithDetails, err = pbStatus.WithDetails(pbPreconditionFailure); err != nil {
 		return pbStatus.Err()
 	}
@@ -121,9 +121,9 @@ func NewPreconditionFailureError(pbPreconditionFailure *errdetails.PreconditionF
 }
 
 func NewResourceExhaustedError(pbQuotaFailure *errdetails.QuotaFailure) (err error) {
-	pbStatus := status.New(codes.ResourceExhausted, "")
-
 	var pbStatusWithDetails *status.Status
+
+	pbStatus := status.New(codes.ResourceExhausted, "")
 	if pbStatusWithDetails, err = pbStatus.WithDetails(pbQuotaFailure); err != nil {
 		return pbStatus.Err()
 	}
@@ -132,9 +132,9 @@ func NewResourceExhaustedError(pbQuotaFailure *errdetails.QuotaFailure) (err err
 }
 
 func NewUnauthenticatedError(pbErrorInfo *errdetails.ErrorInfo) (err error) {
-	pbStatus := status.New(codes.Unauthenticated, "")
-
 	var pbStatusWithDetails *status.Status
+
+	pbStatus := status.New(codes.Unauthenticated, "")
 	if pbStatusWithDetails, err = pbStatus.WithDetails(pbErrorInfo); err != nil {
 		return pbStatus.Err()
 	}
@@ -151,9 +151,9 @@ func NewUnimplementedError() (err error) {
 }
 
 func NewUnknownError(pbDebugInfo *errdetails.DebugInfo) (err error) {
-	pbStatus := status.New(codes.Unknown, "")
-
 	var pbStatusWithDetails *status.Status
+
+	pbStatus := status.New(codes.Unknown, "")
 	if pbStatusWithDetails, err = pbStatus.WithDetails(pbDebugInfo); err != nil {
 		return pbStatus.Err()
 	}

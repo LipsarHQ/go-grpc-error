@@ -1,6 +1,6 @@
 module github.com/LipsarHQ/go-grpc-error
 
-go 1.21.3
+go 1.20
 
 require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20231030173426-d783a09b4405

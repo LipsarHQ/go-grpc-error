@@ -259,7 +259,7 @@ linters-settings:
   gomodguard:
     allowed:
       domains:
-        - github.com
+        - google.golang.org
       modules: [ ]
     blocked:
       local_replace_directives: true
