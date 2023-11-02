@@ -4,7 +4,8 @@
 
 gRPC error library for Go/Golang.
 
-If you are a server developer, you should generate errors with enough information to help client developers understand and resolve the problem.
+If you are a server developer, you should generate errors with enough information to help client developers understand
+and resolve the problem.
 
 ## Table of Content
 
@@ -47,22 +48,22 @@ applications look for these error payloads in `google.rpc.Status` when they hand
 package main
 
 import (
-  "google.golang.org/genproto/googleapis/rpc/errdetails"
+	"google.golang.org/genproto/googleapis/rpc/errdetails"
 
-  "github.com/LipsarHQ/go-grpc-error"
+	"github.com/LipsarHQ/go-grpc-error"
 )
 
 func main() {
-  // ...
-  if err != nil {
-    // Return error in case of resource not found.
-    return nil, grpcerror.NewNotFoundError(&errdetails.ResourceInfo{
-      ResourceType: "", // string(new(examplepb.Example).ProtoReflect().Descriptor().FullName())
-      ResourceName: "", // ID.
-      Owner:        "", // ID.
-      Description:  err.Error(),
-    })
-  }
+	// ...
+	if err != nil {
+		// Return error in case of resource not found.
+		return nil, grpcerror.NewNotFoundError(&errdetails.ResourceInfo{
+			ResourceType: "", // string(new(examplepb.Example).ProtoReflect().Descriptor().FullName())
+			ResourceName: "", // ID.
+			Owner:        "", // ID.
+			Description:  err.Error(),
+		})
+	}
 }
 
 ```
@@ -74,4 +75,4 @@ func main() {
 ## Links
 
 * [Google Cloud API design guide](https://cloud.google.com/apis/design)
-  * [Error Payloads](https://cloud.google.com/apis/design/errors#error_payloads)
+    * [Error Payloads](https://cloud.google.com/apis/design/errors#error_payloads)
